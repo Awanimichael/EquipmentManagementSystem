@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+.xop-section {
+	max-width: auto;
+	margin: 0 auto;
+	padding: 0% 2%;
+}
+
+.xop-grid {
+	margin: 0 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	text-align: center;
+    width: 100%;
+	/* background-color: rgba(163,193,167,0.8); */
+	background-color: rgba(255,255,255,0.5)
+}
+
+.xop-grid:after {
+	clear: both;
+}
+
+.xop-grid:after, .xop-box:before {
+	content: '';
+	display: table;
+}
+
+.xop-grid li {
+	width: 328px;
+	height: 328px;
+	display: inline-block;
+	margin: 20px;
+}
+.xop-box {
+	width: 80%;
+	height: 80%;
+	position: relative;
+    border-radius: 10px;
+    -webkit-transition: 0.3s ease-in-out, 
+    -webkit-transform 0.3s ease-in-out;
+	-moz-transition:  0.3s ease-in-out, 
+    -moz-transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, 
+    transform 0.3s ease-in-out, ;
+}
+
+.xop-box:hover {
+	transform: scale(1.05); 
+}
+.xop-img-1 {
+    background: lightgray;
+    
+}
+
+/* .xop-img-2 {
+	background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), 
+	url(../img/equipment.png);
+}
+
+.xop-img-3 {
+	background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), 
+	url(../images/flower.jpg);
+}
+
+.xop-img-4 {
+	background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), 
+	url(../images/feather.jpg);
+}  */
+
+.xop-info {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+.xop-info h3 {
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+	color: #fff;
+	font-size: 35px;
+	margin: 0 30px;
+	/* padding: 20px 0 0 0; */
+	line-height: 1.5;
+}
+
+.xop-info p {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #fff;
+	padding: 4px 5px;
+	margin: 0 10px;
+	font-size: 20px;
+	line-height: 2;
+}
+
+.row-padding, .padding-32 {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0% 2%;
+}
+.third {
+	position: relative;
+    border-radius: 10px;
+}

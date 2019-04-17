@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://localhost:10080/mastersProject/cte-ems/equipment.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <title>Add, Edit and delete Page</title>
+
+   <!-- Load jquery library-->
+  <script src="./Add, Edit and delete Page_files/jquery.min.js"></script>
+  <!-- Load bootstrap stylesheet library-->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="./Add, Edit and delete Page_files/bootstrap.min.css">
+  <!-- Load jquery datatables javascript library-->
+  <script src="./Add, Edit and delete Page_files/jquery.dataTables.min.js"></script>
+  <!-- Load datatables bootstrap javascript library-->
+  <script src="./Add, Edit and delete Page_files/dataTables.bootstrap.min.js"></script>  
+  <!-- Load datatables bootstrap stylesheet library-->
+  <link rel="stylesheet" href="./Add, Edit and delete Page_files/dataTables.bootstrap.min.css">
+  <!-- Load bootstrap javascript library-->
+  <script src="./Add, Edit and delete Page_files/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="./Add, Edit and delete Page_files/style.css">
+	<link href="./Add, Edit and delete Page_files/css" rel="stylesheet">
+
+  <style>
+    body
+    {
+      margin:0;
+      padding:0;
+    }
+    .box
+    {
+      width:1270px;
+      /* padding:20px; */
+      /* background-color:#fff; */
+      background:rgba(255,255,255, 0.9);
+      /* background: rgba(163,193,167,0.8); */
+      border:1px solid #ccc;
+      border-radius:5px;
+      margin-top:25px;
+      padding-bottom:100px
+    }
+    #footer {
+      position: fixed;
+      left:0;
+      bottom:0;
+      width: 100%;
+      height: auto;
+      background-color:white;
+      /* text-align:center; */
+      padding-top: 10px;
+    }
+  </style>
+ </head>
+ <body class="body2">
+<div class="banner">
+  <div class="logo">
+		<img src="./Add, Edit and delete Page_files/cte_logo.png">
+	</div>
+	<h2>C.T.E EMS</h2>
+</div>
+
+  <div class="home-nav">
+    <a class="logout" href="http://localhost:10080/mastersProject/cte-ems/home.php">Home</a>
+    <a class="logout" href="http://localhost:10080/mastersProject/cte-ems/report.php">Generate report</a>
+		<a class="logout" href="http://localhost:10080/mastersProject/cte-ems/phpqrcode/qrgen.php">Generate QRCode</a>
+		<a class="logout" href="http://localhost:10080/mastersProject/cte-ems/add-faculty.php">Faculty</a>
+		<a class="logout" href="http://localhost:10080/mastersProject/cte-ems/available-equipment.php">Available Equipment</a>
+	</div>
+
+  <div class="p2-wrapper">
+	<div class="sign-up-wrapper">
+  
+
+  <div class="container box">
+   <h1 align="center">Inventory List</h1>
+   <br>
+   <div class="table-responsive">
+    <br>
+    <div align="right">
+     <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Add</button>
+    </div>
+    <br><br>
+    <div id="user_data_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="user_data_length"><label>Show <select name="user_data_length" aria-controls="user_data" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="user_data_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="user_data"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="user_data" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="user_data_info" style="width: 548px;">
+     <thead>
+      <tr role="row"><th width="10%" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Qrcode" style="width: 51.0104px;">Qrcode</th><th width="20%" class="sorting" tabindex="0" aria-controls="user_data" rowspan="1" colspan="1" aria-label="Equipment ID: activate to sort column ascending" style="width: 88.0104px;">Equipment ID</th><th width="20%" class="sorting" tabindex="0" aria-controls="user_data" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending" style="width: 55.0104px;">Type</th><th width="30%" class="sorting" tabindex="0" aria-controls="user_data" rowspan="1" colspan="1" aria-label="Notes: activate to sort column ascending" style="width: 85.0104px;">Notes</th><th width="10%" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Edit" style="width: 53.0104px;">Edit</th><th width="10%" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Delete" style="width: 49px;">Delete</th></tr>
+     </thead>
+    <tbody><tr role="row" class="odd"><td><img src="./Add, Edit and delete Page_files/152251589.png" class="img-thumbnail" width="50" height="35"></td><td>EBRNC44000040</td><td>Infocus Projector</td><td>Katy</td><td><button type="button" name="update" id="EBRNC44000040" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="EBRNC44000040" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="even"><td><img src="./Add, Edit and delete Page_files/463637064.png" class="img-thumbnail" width="50" height="35"></td><td>EBPVC44800117</td><td>InFocus Projector</td><td>Africa</td><td><button type="button" name="update" id="EBPVC44800117" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="EBPVC44800117" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="odd"><td><img src="./Add, Edit and delete Page_files/146045820.png" class="img-thumbnail" width="50" height="35"></td><td>E5CD8142ZQ5</td><td>Laptop</td><td>HP  ProBook Iowa</td><td><button type="button" name="update" id="E5CD8142ZQ5" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E5CD8142ZQ5" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="even"><td><img src="./Add, Edit and delete Page_files/769813702.png" class="img-thumbnail" width="50" height="35"></td><td>E17O0120642</td><td>Epson Projector</td><td>Hawaii</td><td><button type="button" name="update" id="E17O0120642" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E17O0120642" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="odd"><td><img src="./Add, Edit and delete Page_files/694759205.png" class="img-thumbnail" width="50" height="35"></td><td>E17O0120640</td><td>Epson Projector</td><td>Indiana</td><td><button type="button" name="update" id="E17O0120640" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E17O0120640" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="even"><td><img src="./Add, Edit and delete Page_files/409183867.png" class="img-thumbnail" width="50" height="35"></td><td>E17O0120638</td><td>InFocus Projector</td><td>Kentucky</td><td><button type="button" name="update" id="E17O0120638" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E17O0120638" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="odd"><td><img src="./Add, Edit and delete Page_files/941664262.png" class="img-thumbnail" width="50" height="35"></td><td>E17O0120637</td><td>InFocus Projector</td><td>Alaska</td><td><button type="button" name="update" id="E17O0120637" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E17O0120637" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="even"><td><img src="./Add, Edit and delete Page_files/753529859.png" class="img-thumbnail" width="50" height="35"></td><td>E17O0120636</td><td>Infocus Projector</td><td>Colorado</td><td><button type="button" name="update" id="E17O0120636" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E17O0120636" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="odd"><td><img src="./Add, Edit and delete Page_files/927094812.png" class="img-thumbnail" width="50" height="35"></td><td>E17C0120533</td><td>Laptop</td><td>MacBook Pro Bullet</td><td><button type="button" name="update" id="E17C0120533" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E17C0120533" class="btn btn-danger btn-xs delete">Delete</button></td></tr><tr role="row" class="even"><td><img src="./Add, Edit and delete Page_files/1133601648.png" class="img-thumbnail" width="50" height="35"></td><td>E16O0118764</td><td>Epson Projector</td><td>Goodwill White</td><td><button type="button" name="update" id="E16O0118764" class="btn btn-warning btn-xs update">Update</button></td><td><button type="button" name="delete" id="E16O0118764" class="btn btn-danger btn-xs delete">Delete</button></td></tr></tbody></table><div id="user_data_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="user_data_info" role="status" aria-live="polite">Showing 1 to 10 of 28 entries (filtered from 10 total entries)</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="user_data_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="user_data_previous"><a href="http://localhost:10080/mastersProject/cte-ems/equipment.php#" aria-controls="user_data" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="http://localhost:10080/mastersProject/cte-ems/equipment.php#" aria-controls="user_data" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="http://localhost:10080/mastersProject/cte-ems/equipment.php#" aria-controls="user_data" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="http://localhost:10080/mastersProject/cte-ems/equipment.php#" aria-controls="user_data" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button next" id="user_data_next"><a href="http://localhost:10080/mastersProject/cte-ems/equipment.php#" aria-controls="user_data" data-dt-idx="4" tabindex="0">Next</a></li></ul></div></div></div></div>
+    
+   </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="footer">
+    <ul>
+      <li><a style="font-size:15px;" href="https://www.pvamu.edu/cte">Click here to CTE webpage</a></li>
+      <li><a style="font-size:15px;" href="http://localhost:10080/mastersProject/cte-ems/equipment.php#">Click here to read users manual</a></li>
+    </ul>
+</div>
+ 
+
+
+<div id="userModal" class="modal fade">
+ <div class="modal-dialog">
+  <form method="post" id="user_form" enctype="multipart/form-data">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal">×</button>
+     <h4 class="modal-title">Add New Equipment</h4>
+    </div>
+    <div class="modal-body">
+     <label>Enter Equipment ID</label>
+     <input type="text" name="itemID" id="itemID" class="form-control" placeholder="Equipment ID">
+     <br>
+     <label>Enter Equipment Type</label>
+     <input type="text" name="itemType" id="itemType" class="form-control" placeholder="Equipment Type">
+     <br>
+     <label>Enter Equipment Note</label>
+     <input type="text" name="itemNotes" id="itemNotes" class="form-control" placeholder="Equipment Notes">
+     <br>
+     <label>Select Qr code</label>
+     <input type="file" name="barcode" id="barcode" accept="image/*">
+     <span id="user_uploaded_image"></span>
+    </div>
+    <div class="modal-footer">
+     <input type="hidden" name="user_id" id="user_id">
+     <input type="hidden" name="operation" id="operation">
+     <input type="submit" name="action" id="action" class="btn btn-success" value="Add">
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+   </div>
+  </form>
+ </div>
+</div>
+
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){
+ $('#add_button').click(function(){
+  $('#user_form')[0].reset();
+  $('.modal-title').text("Add New Equipment");
+  $('#action').val("Add");
+  $('#operation').val("Add");
+  $('#user_uploaded_image').html('');
+ });
+ 
+ var dataTable = $('#user_data').DataTable({
+  "processing":true,
+  "serverSide":true,
+  "order":[],
+  "ajax":{
+   url:"efetch.php",
+   type:"POST",
+  },
+  "columnDefs":[
+   {
+    "targets":[0, 4, 5],
+    "orderable":false,
+   },
+  ],
+
+ });
+
+ $(document).on('submit', '#user_form', function(event){
+  event.preventDefault();
+  var itemID = $('#itemID').val();
+  var itemType = $('#itemType').val();
+  var itemNotes = $('#itemNotes').val();
+  var extension = $('#barcode').val().split('.').pop().toLowerCase();
+  if(extension != '')
+  {
+   if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
+   {
+    alert("Invalid Image File");
+    $('#barcode').val('');
+    return false;
+   }
+  } 
+  if(itemID != '' && itemType != '' && itemNotes != '')
+  {
+   $.ajax({
+    url:"einsert.php",
+    method:'POST',
+    data:new FormData(this),
+    contentType:false,
+    processData:false,
+    success:function(data)
+    {
+     alert(data);
+     $('#user_form')[0].reset();
+     $('#userModal').modal('hide');
+     dataTable.ajax.reload();
+    }
+   });
+  }
+  else
+  {
+   alert("All Fields are Required");
+  }
+ });
+ 
+ $(document).on('click', '.update', function(){
+  var user_id = $(this).attr("id");
+  $.ajax({
+   url:"efetch_single.php",
+   method:"POST",
+   data:{user_id:user_id},
+   dataType:"json",
+   success:function(data)
+   {
+    $('#userModal').modal('show');
+    $('#itemID').val(data.itemID);
+    $('#itemType').val(data.itemType);
+    $('#itemNotes').val(data.itemNotes);
+    $('.modal-title').text("Edit Equipment");
+    $('#user_id').val(user_id);
+    $('#user_uploaded_image').html(data.barcode);
+    $('#action').val("Edit");
+    $('#operation').val("Edit");
+   }
+  })
+ });
+ 
+ $(document).on('click', '.delete', function(){
+  var user_id = $(this).attr("id");
+  if(confirm("Are you sure you want to delete this?"))
+  {
+   $.ajax({
+    url:"edelete.php",
+    method:"POST",
+    data:{user_id:user_id},
+    success:function(data)
+    {
+     alert(data);
+     dataTable.ajax.reload();
+    }
+   });
+  }
+  else
+  {
+   return false; 
+  }
+ });
+ 
+ 
+});
+</script></body></html>
