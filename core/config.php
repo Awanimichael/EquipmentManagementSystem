@@ -9,8 +9,8 @@
 
     //SMTP
     define("M_HOST",'smtp.gmail.com');
-    define("M_USERNAME", 'rotimiawani@gmail.com');
-    define("M_PASSWORD", 'studybook1');
+    define("M_USERNAME", '');
+    define("M_PASSWORD", '');
     define("M_SMTPSECURE", 'ssl');
     define("M_PORT", "465");
 
